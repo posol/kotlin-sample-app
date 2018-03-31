@@ -36,10 +36,10 @@ class LogServiceApplication {
     fun init(service: LogService): CommandLineRunner {
         return CommandLineRunner {
 
-            service.createNewLog(LogDto("1997-07-16T19:20:30+01:00", "INFO", "error"),"user")
-            service.createNewLog(LogDto("1989-03-27T19:20:30+01:00", "INFO", "error"),"user")
-            service.createNewLog(LogDto("2001-07-16T19:20:30+01:00", "INFO", "error"),"user")
-            service.createNewLog(LogDto("2018-01-16T19:20:30+01:00", "INFO", "error"),"admin")
+            service.createNewLog(LogDto(dt = "1997-07-16T19:20:30+01:00", level = "INFO", message = "error"),user = "user")
+            service.createNewLog(LogDto(dt ="1989-03-27T19:20:30+01:00",level = "INFO", message = "error"),user ="user")
+            service.createNewLog(LogDto(dt ="2001-07-16T19:20:30+01:00", level ="INFO", message = "error"),user ="user")
+            service.createNewLog(LogDto(dt ="2018-01-16T19:20:30+01:00", level ="INFO", message = "error"),user ="admin")
         }
     }
 
