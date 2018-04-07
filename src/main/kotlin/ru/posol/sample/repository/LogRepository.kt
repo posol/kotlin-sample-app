@@ -9,9 +9,9 @@ import ru.posol.sample.domain.LogLevel
  * Spring Data JPA repository for the Log entity.
  */
 @Repository
-interface LogRepository : PagingAndSortingRepository<Log,Long> {
+interface LogRepository : PagingAndSortingRepository<Log, Long> {
 
-    fun findByLevel(level: LogLevel) : Iterable<Log>
+    fun findByLevel(level: LogLevel): Iterable<Log>
 
-    fun findByAuthor(level: LogLevel) : Iterable<Log>
+    fun findByAuthor(level: LogLevel): Iterable<Log>
 }

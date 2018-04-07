@@ -21,7 +21,7 @@ public class EnumValidator implements ConstraintValidator<IsEnumValue, String> {
 
         try {
             LogLevel logLevel = LogLevel.valueOf(value);
-        } catch (Exception e ) {
+        } catch (Exception e) {
             result = false;
         }
 

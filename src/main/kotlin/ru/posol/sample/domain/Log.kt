@@ -8,11 +8,11 @@ import javax.persistence.*
  * A Log Entity.
  */
 @Entity
-@Table(name="logs")
+@Table(name = "logs")
 data class Log(
 
         val author: String = "",
-        val dt: OffsetDateTime  = OffsetDateTime.now(),
+        val dt: OffsetDateTime = OffsetDateTime.now(),
         val level: LogLevel = LogLevel.INFO,
         val message: String = "",
         @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
