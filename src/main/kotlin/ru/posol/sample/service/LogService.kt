@@ -19,7 +19,7 @@ import ru.posol.sample.service.mapper.LogMapper
 @Transactional
 class LogService {
 
-    val logger = LoggerFactory.getLogger("ru.posol.sample.service.LogService")
+    val logger = LoggerFactory.getLogger(LogService::class.java)
 
     @Autowired
     lateinit var logRepository: LogRepository

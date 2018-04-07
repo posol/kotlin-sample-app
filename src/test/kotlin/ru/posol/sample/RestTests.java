@@ -31,7 +31,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class RestTests {
 
-    private static final Logger logger = LoggerFactory.getLogger("RestTests");
+    private static final Logger logger = LoggerFactory.getLogger(RestTests.class);
 
     private static final String ROOT_URL = "http://localhost:8080/api";
 

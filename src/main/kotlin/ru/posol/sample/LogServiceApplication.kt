@@ -21,7 +21,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2
 @EnableSwagger2
 class LogServiceApplication {
 
-    val logger = LoggerFactory.getLogger("ru.posol.sample.LogServiceApplication")
+    val logger = LoggerFactory.getLogger(LogServiceApplication::class.java)
 
     @Bean
     open fun api(): Docket = Docket(DocumentationType.SWAGGER_2)
@@ -35,6 +35,7 @@ class LogServiceApplication {
     @ConditionalOnClass(H2Dialect::class)
     fun init(service: LogService): CommandLineRunner {
         return CommandLineRunner {
+            logger.info("test data loading");
             service.createNewLog(LogDto(dt = "1997-07-16T19:20:30+01:00", level = "INFO", message = "error"), user = "user")
             service.createNewLog(LogDto(dt = "1989-03-27T19:20:30+01:00", level = "INFO", message = "error"), user = "user")
             service.createNewLog(LogDto(dt = "2001-07-16T19:20:30+01:00", level = "INFO", message = "error"), user = "user")
