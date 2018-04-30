@@ -16,5 +16,5 @@ data class Log(
         val level: LogLevel = LogLevel.INFO,
         val message: String = "",
         @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
-        val id: Long = -1
+        val id: Long = 0
 )
